@@ -79,7 +79,8 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
           borderRadius: const BorderRadius.only(
             bottomLeft: Radius.circular(30.0),
             bottomRight: Radius.circular(30.0),
-          ),),
+          ),
+        ),
       ),
 
 
@@ -90,42 +91,51 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               new Container(
-                height: 300.0,
+                height: _maxHeigt,
                 child: new ListView(
                   children: _allDrinks,
                   scrollDirection: Axis.vertical,
                 ),
               ),
-                new TextButton(
-                  onPressed: _addNewDrink,
-                    child: new Text('+Beer'),
-                  style: TextButton.styleFrom(
-                    primary: Colors.pink,
-                    backgroundColor: Colors.amber,
-                    minimumSize: Size(100,100),
-                    shape: CircleBorder(),
-                  )
-                ),
-                new TextButton(
-                onPressed: _addNewDrink,
-                  child: new Text('+Wine'),
-                ),
-                new TextButton(
-                onPressed: _addNewDrink,
-                  child: new Text('+Shot'),
-                ),
+                new Row(
+                  children: <Widget>[
+                    new TextButton(
+                        onPressed: _addNewDrink,
+                        child: new Text('+Beer'),
+                        style: TextButton.styleFrom(
+                          primary: Colors.pink,
+                          backgroundColor: Colors.amber,
+                          minimumSize: Size(70,70),
+                          shape: CircleBorder(),
+                        )
+                    ),
+                    new TextButton(
+                      onPressed: _addNewDrink,
+                      child: new Text('+Wine'),
+                        style: TextButton.styleFrom(
+                          primary: Colors.pink,
+                          backgroundColor: Colors.amber,
+                          minimumSize: Size(70,70),
+                          shape: CircleBorder(),
+                        )
+                    ),
+                    new TextButton(
+                      onPressed: _addNewDrink,
+                      child: new Text('+Shot'),
+                        style: TextButton.styleFrom(
+                          primary: Colors.pink,
+                          backgroundColor: Colors.amber,
+                          minimumSize: Size(70,70),
+                          shape: CircleBorder(),
+                        )
+                    ),
+                  ],
+                )
             ],
           ),
         );
       },
       ),
-
-      floatingActionButton: FloatingActionButton(
-        //onPressed: _incrementCounter,
-        onPressed: _addNewDrink,
-        tooltip: 'Increment',
-        child: Text('Beer'), //Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
 
   }
