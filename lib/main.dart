@@ -85,13 +85,12 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
 
       body: new LayoutBuilder(builder: (context, constraint){
         final _maxHeigt = constraint.biggest.height/3;
-        final _biggerFont = TextStyle(fontSize: _maxHeigt/6);
         return new Center(
           child: new Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               new Container(
-                height: 200.0,
+                height: 300.0,
                 child: new ListView(
                   children: _allDrinks,
                   scrollDirection: Axis.vertical,
@@ -100,6 +99,12 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
                 new TextButton(
                   onPressed: _addNewDrink,
                     child: new Text('+Beer'),
+                  style: TextButton.styleFrom(
+                    primary: Colors.pink,
+                    backgroundColor: Colors.amber,
+                    minimumSize: Size(100,100),
+                    shape: CircleBorder(),
+                  )
                 ),
                 new TextButton(
                 onPressed: _addNewDrink,
