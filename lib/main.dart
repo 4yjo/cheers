@@ -62,7 +62,7 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    List<Widget> _allDrinks = new List.generate(_counter, (int i) => new Text('Drink'));
+    List<Widget> _allDrinks = new List.generate(_counter, (int i) => new Icon(Icons.add));
     //TODO diffrentiate between drinks
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
