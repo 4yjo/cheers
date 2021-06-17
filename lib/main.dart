@@ -62,8 +62,11 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    List<Widget> _allDrinks = new List.generate(_counter, (int i) => new Icon(Icons.add));
+   // List<Widget> _allDrinks = new List.generate(_counter, (int i) => new Icon(Icons.add));
+     List<Widget> _allDrinks = new List.generate(_counter, (int i) => new Image.asset('images/longdrink_full.png', width:60, height:60));
     //TODO diffrentiate between drinks
+     //TODO: remove items on long hold (as apps on iphone)
+     //TODO: Maybe add sound?
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
     //
@@ -90,13 +93,14 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
           child: new Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              new Container(
-                height: _maxHeigt,
-                child: new ListView(
-                  children: _allDrinks,
-                  scrollDirection: Axis.vertical,
-                ),
-              ),
+              //Image.asset('images/longdrink_full.png'),
+               new Container(
+                 height: _maxHeigt,
+                 child: new ListView(
+                   children: _allDrinks,
+                   scrollDirection: Axis.horizontal,
+                 ),
+               ),
                 new Row(
                   children: <Widget>[
                     new TextButton(
