@@ -63,7 +63,7 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
   @override
   Widget build(BuildContext context) {
    // List<Widget> _allDrinks = new List.generate(_counter, (int i) => new Icon(Icons.add));
-     List<Widget> _allDrinks = new List.generate(_counter, (int i) => new Image.asset('images/longdrink_full.png', width:60, height:60));
+     List<Widget> _allDrinks = new List.generate(_counter, (int i) => new Image.asset('images/aperol.png'));
     //TODO diffrentiate between drinks
      //TODO: remove items on long hold (as apps on iphone)
      //TODO: Maybe add sound?
